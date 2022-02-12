@@ -1,0 +1,22 @@
+# Interval: seconds between requests
+interval: 600
+
+# Services
+services:
+  - name: Example.com
+    url: https://example.com
+    resp_code: 200 # expected response status code
+    alert: true # send a POST alert
+    alert_webhook: https://hook.example.com/matrix/sendmsg # alert webhook URL
+    alert_form_parms: # url encoded POST form parms to be sent to webhook
+      secret: "HIDDEN"
+      content: "XXX Service is Down. Help needed ASAP !"
+
+  - name: Service 2
+    url: https://example.com
+    resp_code: 200 # expected response status code
+    alert: true
+    alert_webhook: https://hook.example.com/matrix/sendmsg
+    alert_form_parms:
+      secret: "HIDDEN"
+      content: "XXX Service is Down. Help needed ASAP !"
