@@ -3,4 +3,4 @@ run:
 
 
 build:
-	go build -o ./bin/uptimebot ./cmd/uptimebot
+	CGO_ENABLED=0 go build -o ./bin/uptimebot ./cmd/uptimebot
